@@ -2,14 +2,12 @@ import { type Metadata } from 'next'
 import { Navigation } from '@/components/navigation';
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+ 
 } from '@clerk/nextjs'
-import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import 'flowbite';
+
 
 
 const geistSans = Geist({
@@ -38,7 +36,6 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
          
            <Navigation/>
-         
           {children}
         </body>
       </html>
