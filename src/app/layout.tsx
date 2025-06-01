@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import 'flowbite';
 import Title from '@/components/title';
+import SalesCard from '@/components/salescard';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,6 +33,7 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
            <Navigation/>
            <Title/>
+            <SalesCard/>
           {children}
         </body>
       </html>

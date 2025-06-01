@@ -13,32 +13,32 @@ export default function Title() {
 
                 <div className="flex flex-wrap justify-center gap-4 mb-6 max-w-full">
                   <div className="flex flex-col items-center">
-                      <Image src="/android-chrome-512x512.webp" alt="Ashna Logo" width={25} height={25} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
+                      <Image src="/android-chrome-512x512.webp" alt="Ashna Logo" width={40} height={40} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
                     <p className="text-lg text-white font-barlow">Ashna</p>
                   </div>
 
                   <div className="flex flex-col items-center">
-                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={25} height={25} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={40} height={40} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
                     <p className="text-lg text-white font-barlow">Claude ai</p>
                   </div>
       
                   <div className="flex flex-col items-center">
-                    <Image src="/OIP.jpg" alt="claude ai Logo" width={25} height={25} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/OIP.jpg" alt="claude ai Logo" width={40} height={40} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
                     <p className="text-lg text-white font-barlow">Gemini ai</p>
                   </div>
 
                   <div className="flex flex-col items-center">
-                    <Image src="/mistral.png" alt="claude ai Logo" width={25} height={25} className="w-15 h-15 mb-4  shadow-lg border-2 "/>
+                    <Image src="/mistral.png" alt="claude ai Logo" width={40} height={40} className="w-15 h-15 mb-4  shadow-lg border-2 "/>
                     <p className="text-lg text-white font-barlow">mistral  ai</p>
                   </div>
 
                   <div className="flex flex-col items-center">
-                      <Image src="/meta.png" alt="claude ai Logo" width={25} height={25} className="w-15 h-15 mb-4  shadow-lg border-2 "/>
+                      <Image src="/meta.png" alt="claude ai Logo" width={40} height={40} className="w-15 h-15 mb-4  shadow-lg border-2 "/>
                       <p className="text-lg text-white font-barlow">meta ai</p>
                   </div>
 
                   <div className="flex flex-col items-center">
-                      <Image src="/chatgpt.svg" alt="gpt ai Logo" width={25} height={25} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
+                      <Image src="/chatgpt.svg" alt="gpt ai Logo" width={40} height={40} className="w-15 h-15 mb-4 rounded-full shadow-lg border-2 "/>
                       <p className="text-lg text-white font-barlow">gpt ai</p>
                   </div>
           
