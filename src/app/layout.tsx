@@ -6,6 +6,7 @@ import './globals.css';
 import 'flowbite';
 import Title from '@/components/title';
 import SalesCard from '@/components/salescard';
+import Table1 from '@/components/table1';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +34,8 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
            <Navigation/>
            <Title/>
-            <SalesCard/>
+          <SalesCard/>
+          <Table1/>
           {children}
         </body>
       </html>

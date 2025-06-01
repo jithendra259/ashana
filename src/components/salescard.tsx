@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function SalesCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 p-4 gap-8">
       <div className="relative flex flex-wrap flex-col justify-between p-8 sm:p-10 rounded-xl border transition-all duration-300 transform hover:scale-105 bg-black/75 border-gray-700 shadow-lg hover:shadow-2xl">
       <div className="mt-6 ">
         <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-barlow">Basics</h2>
@@ -221,7 +221,7 @@ export default function SalesCard() {
       <div className="relative flex flex-wrap flex-col justify-between p-8 sm:p-10 rounded-xl border transition-all duration-300 transform hover:scale-105 bg-black/75 border-gray-700 shadow-lg hover:shadow-2xl">
       <div className="mt-6 ">
         <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-barlow">Corporate</h2>
-        <p className="text-3xl sm:text-4xl font-extrabold mb-2 text-white font-barlow">Custom Pricing (Starts at ₹50,000 / month)</p>
+        <p className="text-3xl sm:text-4xl font-bold mb-2 text-white font-barlow">Custom Pricing (Starts at ₹50,000 / month)</p>
         <p className="text-sm text-gray-400 mb-6 font-outfit">Billed monthly</p>
         <ul className="space-y-4 mb-8">
             <li className="flex items-start gap-4 text-gray-300 text-sm sm:text-base leading-relaxed">
