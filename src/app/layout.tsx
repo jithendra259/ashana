@@ -7,6 +7,9 @@ import 'flowbite';
 import Title from '@/components/title';
 import SalesCard from '@/components/salescard';
 import Table1 from '@/components/table1';
+import Table2 from '@/components/table2';
+import Table3 from '@/components/table3';
+import Table4 from '@/components/table4';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,6 +39,9 @@ export default function RootLayout({
            <Title/>
           <SalesCard/>
           <Table1/>
+          <Table2/>
+          <Table3/>
+          <Table4/>
           {children}
         </body>
       </html>
