@@ -6,6 +6,12 @@ import './globals.css';
 import 'flowbite';
 import Title from '@/components/title';
 import SalesCard from '@/components/salescard';
+import Table1 from '@/components/table1';
+import Table2 from '@/components/table2';
+import Table3 from '@/components/table3';
+import Table4 from '@/components/table4';
+import SalesCard2 from '@/components/salescard2';
+import Footer from '@/components/footer/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +39,15 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
            <Navigation/>
            <Title/>
-            <SalesCard/>
+          <SalesCard/>
+          <Table1/>
+          <Table2/>
+          <Table3/>
+          <Table4/>
+          <SalesCard2/>
+          <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
+                <Footer/>
+          </footer>
           {children}
         </body>
       </html>

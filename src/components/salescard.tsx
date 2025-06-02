@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function SalesCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 p-4 gap-8">
       <div className="relative flex flex-wrap flex-col justify-between p-8 sm:p-10 rounded-xl border transition-all duration-300 transform hover:scale-105 bg-black/75 border-gray-700 shadow-lg hover:shadow-2xl">
       <div className="mt-6 ">
         <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-barlow">Basics</h2>
@@ -86,15 +86,11 @@ export default function SalesCard() {
             <li className="flex items-start gap-4 text-gray-300 text-sm sm:text-base leading-relaxed">
                <div className="flex flex-wrap justify-center gap-3 mb-5 max-w-full">
                     <Image src="/android-chrome-512x512.webp" alt="Ashna Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                              
-                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                               
-                    <Image src="/OIP.jpg" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                             
-                    <Image src="/mistral.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
-                               
-                    <Image src="/meta.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
 
+                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/OIP.jpg" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/mistral.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
+                    <Image src="/meta.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
                     <Image src="/chatgpt.svg" alt="gpt ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
                   </div>
             </li>
@@ -221,7 +217,7 @@ export default function SalesCard() {
       <div className="relative flex flex-wrap flex-col justify-between p-8 sm:p-10 rounded-xl border transition-all duration-300 transform hover:scale-105 bg-black/75 border-gray-700 shadow-lg hover:shadow-2xl">
       <div className="mt-6 ">
         <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-barlow">Corporate</h2>
-        <p className="text-3xl sm:text-4xl font-extrabold mb-2 text-white font-barlow">Custom Pricing (Starts at ₹50,000 / month)</p>
+        <p className="text-3xl sm:text-4xl font-bold mb-2 text-white font-barlow">Custom Pricing (Starts at ₹50,000 / month)</p>
         <p className="text-sm text-gray-400 mb-6 font-outfit">Billed monthly</p>
         <ul className="space-y-4 mb-8">
             <li className="flex items-start gap-4 text-gray-300 text-sm sm:text-base leading-relaxed">
