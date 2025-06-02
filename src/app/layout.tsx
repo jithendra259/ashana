@@ -42,6 +42,9 @@ export default function RootLayout({
           <Table2/>
           <Table3/>
           <Table4/>
+          <footer className="row-start-1 flex gap-[5px] flex-wrap items-center justify-center">
+       <p>footer</p>
+      </footer>
           {children}
         </body>
       </html>
