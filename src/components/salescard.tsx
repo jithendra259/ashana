@@ -86,15 +86,11 @@ export default function SalesCard() {
             <li className="flex items-start gap-4 text-gray-300 text-sm sm:text-base leading-relaxed">
                <div className="flex flex-wrap justify-center gap-3 mb-5 max-w-full">
                     <Image src="/android-chrome-512x512.webp" alt="Ashna Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                              
-                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                               
-                    <Image src="/OIP.jpg" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
-                             
-                    <Image src="/mistral.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
-                               
-                    <Image src="/meta.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
 
+                    <Image src="/claude-ai-icon-65aa.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/OIP.jpg" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
+                    <Image src="/mistral.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
+                    <Image src="/meta.png" alt="claude ai Logo" width={40} height={40} className="w-10 h-10 mb-4  shadow-lg border-2 "/>
                     <Image src="/chatgpt.svg" alt="gpt ai Logo" width={40} height={40} className="w-10 h-10 mb-4 rounded-full shadow-lg border-2 "/>
                   </div>
             </li>

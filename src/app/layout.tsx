@@ -10,6 +10,8 @@ import Table1 from '@/components/table1';
 import Table2 from '@/components/table2';
 import Table3 from '@/components/table3';
 import Table4 from '@/components/table4';
+import SalesCard2 from '@/components/salescard2';
+import Footer from '@/components/footer/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -42,9 +44,10 @@ export default function RootLayout({
           <Table2/>
           <Table3/>
           <Table4/>
-          <footer className="row-start-1 flex gap-[5px] flex-wrap items-center justify-center">
-       <p>footer</p>
-      </footer>
+          <SalesCard2/>
+          <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
+                <Footer/>
+          </footer>
           {children}
         </body>
       </html>
