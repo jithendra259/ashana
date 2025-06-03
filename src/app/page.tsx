@@ -3,6 +3,9 @@ import { BoxReveal } from "@/components/magicui/box-reveal";
 import './globals.css';
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
+import { Marquee } from "@/components/magicui/marquee";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { File, Settings, Search } from "lucide-react";
 
 const Icons = {
   gitHub: () => (
@@ -194,7 +197,34 @@ export default function Home(){
                         </div>
 
                         <div className="items-center justify-center text-center">
-                            <h1 className="text-4xl font-serif font-bold " >Our Partners & Platforms</h1>
+                            <h1 className="text-4xl font-serif text-fuchsia-500 font-bold" >Our Partners & Platforms</h1>
+                            <Marquee>
+                                <span>Next.js</span>
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                            </Marquee>
+                        </div>
+
+
+                        <div className="items-center justyfy-center text-center">
+                            <h1 className="text-4xl font-serif text-amber-50 font-bold" >Explore Our AI Platform</h1>
+                            <h3>Discover the innovative capabilities behind our advanced AI models.</h3>
+                            <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+                                <OrbitingCircles iconSize={40}>
+                                    <Icons.whatsapp />
+                                    <Icons.notion />
+                                    <Icons.openai />
+                                    <Icons.googleDrive />
+                                    <Icons.whatsapp />
+                                </OrbitingCircles>
+                                <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
+                                    <Icons.whatsapp />
+                                    <Icons.notion />
+                                    <Icons.openai />
+                                    <Icons.googleDrive />
+                                </OrbitingCircles>
+                            </div>
                         </div>
                     </div>
                 </div>
