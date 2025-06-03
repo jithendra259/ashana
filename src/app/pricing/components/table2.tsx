@@ -41,7 +41,6 @@ export default function Table2() {
             <TableCell sx={{color:'#ffff' }} className="p-4 border font-inter border-gray-700">Pro</TableCell>
             <TableCell sx={{color:'#ffff'}} align="right" className="p-4 border font-inter border-gray-700">Team</TableCell>
             <TableCell sx={{color:'#ffff'}} align="right" className="p-4 border font-inter border-gray-700">Enterprise</TableCell>
-           
             </TableRow>
         </TableHead>
         <TableBody>
