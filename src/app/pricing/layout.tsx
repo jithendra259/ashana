@@ -1,17 +1,17 @@
 import { type Metadata } from 'next'
-import { Navigation } from '@/components/navigation';
+import { Navigation } from '@/app/pricing/components/navigation';
 import {ClerkProvider} from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import 'flowbite';
-import Title from '@/components/title';
-import SalesCard from '@/components/salescard';
-import Table1 from '@/components/table1';
-import Table2 from '@/components/table2';
-import Table3 from '@/components/table3';
-import Table4 from '@/components/table4';
-import SalesCard2 from '@/components/salescard2';
-import Footer from '@/components/footer/footer';
+import Title from '@/app/pricing/components/title';
+import SalesCard from '@/app/pricing/components/salescard';
+import Table1 from '@/app/pricing/components/table1';
+import Table2 from '@/app/pricing/components/table2';
+import Table3 from '@/app/pricing/components/table3';
+import Table4 from '@/app/pricing/components/table4';
+import SalesCard2 from '@/app/pricing/components/salescard2';
+import Footer from '@/app/pricing/components/footer/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
