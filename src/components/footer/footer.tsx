@@ -29,12 +29,12 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               <li className="text-sm  my-2">About</li>
               <li className="text-sm my-2">Help</li>
-              
             </ul>
           </div>
         </div>
       </div>
       <div>
+        
         <p className="text-center text-sm mt-4">
           © {new Date().getFullYear()} Ashna AI. All rights reserved.
         </p>
