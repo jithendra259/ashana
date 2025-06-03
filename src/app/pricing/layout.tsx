@@ -37,7 +37,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-           <Navigation/>
+          
            <Title/>
           <SalesCard/>
           <Table1/>
@@ -45,9 +45,7 @@ export default function RootLayout({
           <Table3/>
           <Table4/>
           <SalesCard2/>
-          <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
-                <Footer/>
-          </footer>
+          
           {children}
         </body>
       </html>

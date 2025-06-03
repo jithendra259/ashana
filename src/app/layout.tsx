@@ -32,10 +32,10 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
             <Navigation/>
             {children}
+            
           <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
                 <Footer/>
           </footer>
-          
         </body>
       </html>
     </ClerkProvider>
