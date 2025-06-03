@@ -1,6 +1,6 @@
 
 import { BoxReveal } from "@/components/magicui/box-reveal";
-import './globals.css';
+import '../globals.css';
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Marquee } from "@/components/magicui/marquee";
