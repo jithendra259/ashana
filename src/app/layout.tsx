@@ -1,10 +1,7 @@
 
 import { type Metadata } from 'next'
-import { Navigation } from '@/app/pricing/components/navigation';
 import {ClerkProvider} from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google';
-import 'flowbite';
-import Footer from '@/app/pricing/components/footer/footer';
 import './globals.css';
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -30,11 +27,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            <Navigation/>
-            {children}
-          <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
-                <Footer/>
-          </footer>
+          {children}
         </body>
       </html>
     </ClerkProvider>

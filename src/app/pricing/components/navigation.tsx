@@ -16,7 +16,7 @@ export const Navigation =()=>{
                     <div className="flex items-center gap-4">
                         <SignedOut>
                             <SignInButton mode="modal" >
-                                <button className="text-white text-sm font-medium px-4 py-2 rounded-full bg-[#3b3b3b] transition-all duration-300 hover:bg-purple-500 hover:scale-102 hover:brightness-110 font-inter">
+                                <button  className="text-white text-sm font-medium px-4 py-2 rounded-full bg-[#3b3b3b] transition-all duration-300 hover:bg-purple-500 hover:scale-102 hover:brightness-110 font-inter">
                                     Sign In
                                 </button>
                               
@@ -24,7 +24,6 @@ export const Navigation =()=>{
                             <SignUpButton mode="modal" >
                                
                                <button className="text-white bg-gradient-to-r from-[#6a11cb] to-[#2575fc]  px-4 py-2 rounded-full shadow-lg flex items-center transition-transform duration-300 hover:scale-105 hover:brightness-110 font-inter">Signup</button>
-                               
                             </SignUpButton>
                         </SignedOut>
                        <SignedIn>

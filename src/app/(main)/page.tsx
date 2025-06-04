@@ -1,10 +1,13 @@
 
+
+"use client";
 import { BoxReveal } from "@/components/magicui/box-reveal";
-import './globals.css';
+import '../globals.css';
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Marquee } from "@/components/magicui/marquee";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { useRouter } from 'next/navigation';
 import { File, Settings, Search } from "lucide-react";
 
 const Icons = {
@@ -138,6 +141,7 @@ const Icons = {
  
 
 export default function Home(){
+    const router = useRouter();
     return(
         <div>
             <main className="flex flex-col mt-0 justify-between p-10">
@@ -156,9 +160,10 @@ export default function Home(){
                                     Ashna AI enhances your chat, search, writing & coding using leading ashna-x1 models.
                                     
                                     </h2>
-                                </BoxReveal>
-                                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                                    <InteractiveHoverButton className="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] mt-4 text-white hover:bg-[#3a36b6]">
+                                </BoxReveal>                                <BoxReveal boxColor={"#5046e6"} duration={0.5}>                                    <InteractiveHoverButton 
+                                        onClick={() => router.push('/chat')} 
+                                        className="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] mt-4 text-white hover:bg-[#3a36b6]"
+                                    >
                                         Try ashna
                                     </InteractiveHoverButton>
                                 </BoxReveal>

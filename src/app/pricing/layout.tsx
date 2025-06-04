@@ -4,14 +4,8 @@ import {ClerkProvider} from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 import 'flowbite';
-import Title from '@/app/pricing/components/title';
-import SalesCard from '@/app/pricing/components/salescard';
-import Table1 from '@/app/pricing/components/table1';
-import Table2 from '@/app/pricing/components/table2';
-import Table3 from '@/app/pricing/components/table3';
-import Table4 from '@/app/pricing/components/table4';
-import SalesCard2 from '@/app/pricing/components/salescard2';
 import Footer from '@/app/pricing/components/footer/footer';
+
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -37,16 +31,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          
-           <Title/>
-          <SalesCard/>
-          <Table1/>
-          <Table2/>
-          <Table3/>
-          <Table4/>
-          <SalesCard2/>
-          
+          <Navigation />
+           
           {children}
+          <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
+                  <Footer />
+            </footer>
         </body>
       </html>
     </ClerkProvider>
