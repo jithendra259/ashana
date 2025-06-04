@@ -16,12 +16,12 @@ export default function Price() {
     <div >
       <main >
          <Title/>
-                  <SalesCard/>
-                  <Table1/>
-                  <Table2/>
-                  <Table3/>
-                  <Table4/>
-                  <SalesCard2/>
+          <SalesCard/>
+          <Table1/>
+          <Table2/>
+          <Table3/>
+          <Table4/>
+          <SalesCard2/>
 
       </main>
 
