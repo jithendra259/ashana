@@ -1,5 +1,3 @@
-
-
 import { type Metadata } from 'next'
 import {ClerkProvider} from '@clerk/nextjs'
 import { HeaderActions } from "@/components/ui/header-actions";

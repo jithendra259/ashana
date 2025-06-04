@@ -15,7 +15,7 @@ export default function Price() {
   return (
     <div >
       <main >
-         <Title/>
+          <Title/>
           <SalesCard/>
           <Table1/>
           <Table2/>
