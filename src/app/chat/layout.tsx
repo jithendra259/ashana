@@ -30,12 +30,22 @@ export default function RootLayout({
       <div className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
         <SidebarProvider>
           <AppSidebar />
+        <div className='flex flex-col min-h-screen'>
+          
+          <div className='w-full'>
           <SidebarTrigger className='mt-4 ml-4'/>
-          <main className="flex min-h-screen flex-col">            <div className="fixed top-4 right-4 z-50">
-              <HeaderActions />
+              <div className="fixed top-4 right-4 z-50">
+                <HeaderActions />
+              </div>
+          </div>
+          <main className="flex min-h-screen flex-col">            
+            
+            <div>
+              {children}
+
             </div>
-            {children}
           </main>
+          </div>
         </SidebarProvider>
       </div>
     </ClerkProvider>
