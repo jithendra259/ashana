@@ -27,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <div className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
+      <div className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen w-full`}>
         <SidebarProvider className='min-h-screen'>
               <AppSidebar />
-              <div className='flex flex-col min-h-screen'>
+              <div className='flex flex-col w-full min-h-screen'>
                   <div className='w-full flex items-center justify-between px-4 py-2'>
                       <SidebarTrigger />
                       <HeaderActions/>
