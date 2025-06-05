@@ -22,7 +22,6 @@ export default function Price() {
           <Table3/>
           <Table4/>
           <SalesCard2/>
-
       </main>
 
       

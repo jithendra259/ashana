@@ -45,7 +45,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel><a className="font-semibold text-2xl">Ashana ai</a>  <SidebarTrigger className="ml-auto"/></SidebarGroupLabel>          <SidebarGroupContent>
+          <SidebarGroupLabel><a className="font-semibold text-2xl">Ashana ai</a>  <SidebarTrigger className="ml-auto"/></SidebarGroupLabel> <SidebarGroupContent>
             <SidebarMenu>
               <div className="px-3 py-2">
                 <form className="w-full">   
