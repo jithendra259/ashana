@@ -7,7 +7,7 @@ export function HeaderActions() {
   const [rotated, setRotated] = useState(false);
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 justify-end w-full">
       <ButtonBase><Bot/></ButtonBase>
       <ButtonBase onClick={() => setRotated((prev) => !prev)}>
         <a>
