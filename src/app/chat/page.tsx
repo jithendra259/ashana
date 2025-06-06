@@ -8,7 +8,6 @@ import { GlobeIcon} from "lucide-react";
 import ButtonBase from '@mui/material/ButtonBase';
 import { ScrollArea } from "@/components/ui/scroll-area"
 export default function Chat() {
-  
   return (    
   <div className="flex flex-col h-full">
     <div className="flex-1"></div>

@@ -1,5 +1,3 @@
-
-
 "use client";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import '../globals.css';
@@ -160,7 +158,8 @@ export default function Home(){
                                     Ashna AI enhances your chat, search, writing & coding using leading ashna-x1 models.
                                     
                                     </h2>
-                                </BoxReveal>                                <BoxReveal boxColor={"#5046e6"} duration={0.5}>                                    <InteractiveHoverButton 
+                                </BoxReveal>      
+                                <BoxReveal boxColor={"#5046e6"} duration={0.5}>                                    <InteractiveHoverButton 
                                         onClick={() => router.push('/chat')} 
                                         className="bg-gradient-to-r from-[#6a11cb] to-[#2575fc] mt-4 text-white hover:bg-[#3a36b6]"
                                     >
