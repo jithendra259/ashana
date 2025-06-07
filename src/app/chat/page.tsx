@@ -6,7 +6,7 @@ import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { GlobeIcon} from "lucide-react";
 import ButtonBase from '@mui/material/ButtonBase';
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { ScrollArea } from "@/components/ui/scroll-area";
 export default function Chat() {
   return (    
   <div className="flex flex-col h-full">
@@ -18,7 +18,7 @@ export default function Chat() {
         </div>
         <div className="bg-zinc-800 rounded-2xl ">
           
-        <Textarea placeholder="Do you have doubt?" className="w-full " >
+        <Textarea placeholder="Do you have doubt?" className="w-full  text-amber-50 border-none focus:outline-none focus:ring-0 focus-visible:ring-0 " >
           
         </Textarea>
         <div className="flex mt-2 ml-2 grid-cols-1 md:grid-cols-2 gap-3">
