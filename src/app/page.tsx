@@ -6,7 +6,6 @@ import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Marquee } from "@/components/magicui/marquee";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 import { File, Settings, Search } from "lucide-react";
-
 const Icons = {
   gitHub: () => (
     <svg width="100" height="100" viewBox="0 0 438.549 438.549">
