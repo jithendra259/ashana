@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ButtonBase from "@mui/material/ButtonBase";
+import { SearchIcon } from "lucide-react";
+import { useState } from "react";
 import {
     Command,
     CommandEmpty,
@@ -27,31 +29,69 @@ const aimodels = [
     {
         name: "Ashna AI",
         description: "An AI assistant for your daily tasks.",
-        image: "meta ai"
+        image: "meta ai",
+        category: "assistance"
     },
     {
         name: "ChatGPT",
         description: "OpenAI's powerful language model.",
-        image: "meta ai"
+        image: "meta ai",
+        category: "tops"
     },
     {
         name: "Claude",
         description: "Anthropic's advanced AI assistant.",
-        image: "meta ai"
+        image: "meta ai",
+        category: "assistance",
     },
     {
         name: "Meta AI",
         description: "Meta's conversational AI.",
-        image: "meta ai"
+        image: "meta ai",
+        category: "tops"
     },
     {
         name: "Mistral AI",
         description: "Open source AI assistant.",
-        image: "meta ai"
+        image: "meta ai",
+        category: "developer"
+    },
+    {
+        name: "Visionary",
+        description: "AI for image and video analysis.",
+        image: "meta ai",
+        category: "vision"
+    },
+    {
+        name: "EduBot",
+        description: "AI tutor for students and teachers.",
+        image: "meta ai",
+        category: "education"
+    },
+    {
+        name: "CodeGen",
+        description: "AI code generator and assistant.",
+        image: "meta ai",
+        category: "coding"
+    },
+    {
+        name: "MarketGenius",
+        description: "AI for marketing and analytics.",
+        image: "meta ai",
+        category: "marketing"
     }
 ];
 
 export default function Bots() {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const filteredModels = aimodels.filter(model => {
+        const matchesSearch = model.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                            model.description.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesCategory = !selectedCategory || model.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
     return (
         <div className="p-8">
             <Tabs defaultValue="Explore">
@@ -60,31 +100,41 @@ export default function Bots() {
                     <TabsTrigger value="Explore">Explore</TabsTrigger>
                     <TabsTrigger value="Bot">My Bot</TabsTrigger>
                 </TabsList>
-                <Command className="bg-transparent text-amber-50">
-                    <CommandInput 
-                        placeholder="Type a command or search..." 
-                        className="text-amber-50 border-none focus:outline-none focus:ring-0 focus-visible:ring-0 mt-3"
-                    />
-                    <div className="flex gap-2 mt-2 flex-wrap">
-                        <Button variant="outline">Tops</Button>
-                        <Button variant="outline">Education</Button>
-                        <Button variant="outline">Developer</Button>
-                        <Button variant="outline">Vision</Button>
-                        <Button variant="outline">Marketing</Button>
-                        <Button variant="outline">Coding</Button>
-                        <Button variant="outline">Assistance</Button>
+
+                <div className="mt-3">
+                    <div className="relative border-b border-zinc-600 pb-2">
+                        <SearchIcon  className="absolute left-2 top-1/2 transform -translate-y-1/2 text-zinc-300" />
+                        <Input 
+                            placeholder="Search bots..."
+                            className="text-amber-50 ml-6 bg-transparent border-none focus:outline-none focus:ring-0 focus-visible:ring-0"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        ></Input>
                     </div>
-                    <TabsContent value="Explore" className="mt-4 w-full">
-                        <CommandList className="mt-4 w-full ">
-                            <CommandEmpty>No results found</CommandEmpty>
-                            
-                            {aimodels.map((model, idx) => (
-                                
-                                <CommandItem 
-                                    key={idx} 
-                                    className="h-[200px] gap-2 w-50 bg-zinc-800 rounded-lg  justify-between"
-                                >
-                                    <div className="flex flex-col items-center gap-4">
+
+                    <div className="flex gap-2 mt-2 flex-wrap">
+                        {["tops", "education", "developer", "vision", "marketing", "coding", "assistance"].map((category) => (
+                            <Button
+                                key={category}
+                                variant="outline"
+                                className={selectedCategory === category ? "bg-zinc-700" : ""}
+                                onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
+                            >
+                                {category.charAt(0).toUpperCase() + category.slice(1)}
+                            </Button>
+                        ))}
+                    </div>
+
+                    <TabsContent value="Explore" className="mt-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            {filteredModels.length === 0 ? (
+                                <div className="col-span-full text-center text-amber-50">No results found</div>
+                            ) : (
+                                filteredModels.map((model, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className="h-[200px] p-4 bg-zinc-800 rounded-lg flex flex-col items-center justify-center gap-4"
+                                    >
                                         <img
                                             src={images[idx]?.src}
                                             alt={images[idx]?.alt}
@@ -95,15 +145,17 @@ export default function Bots() {
                                             <CardDescription className="text-sm">{model.description}</CardDescription>
                                         </div>
                                     </div>
-                                </CommandItem>
-                            ))}
-                            
-                        </CommandList>
+                                ))
+                            )}
+                        </div>
                     </TabsContent>
+
                     <TabsContent value="Bot">
-                        bots
+                        <div className="text-amber-50">
+                            My Bots Content
+                        </div>
                     </TabsContent>
-                </Command>
+                </div>
             </Tabs>
         </div>
     );

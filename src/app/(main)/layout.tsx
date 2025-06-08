@@ -7,7 +7,7 @@ export default function MainLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
+    <div>
       <Navigation />
       <main>
         {children}
@@ -15,6 +15,6 @@ export default function MainLayout({
       <footer className="row-start-2 flex gap-[10px] flex-wrap items-center justify-center">
         <Footer />
       </footer>
-    </>
+    </div>
   )
 }
