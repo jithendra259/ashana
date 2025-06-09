@@ -48,7 +48,7 @@ export default function Home(){
                                         Try ashna
                                     </InteractiveHoverButton>
                                 </BoxReveal>
-                            </div>                              <div className="relative flex h-[400px] max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background-transparent border-amber-50">
+                            </div>                              <div className="relative flex h-[400px] max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background-transparent border-none">
                                     <IconCloud 
                                         images={[
                                             "/android-chrome-512x512.webp",
@@ -74,12 +74,13 @@ export default function Home(){
                          
                         <div className="w-1/2 ">
                         <h1 className="text-5xl font-bold mt-5">Our Partners & Platforms</h1>
-                            <Marquee className="mt-4">
-                              {images.map((image, index) => (
-                                        <img
+                            <Marquee className="mt-4">                              {images.map((image, index) => (
+                                        <Image
                                             key={`orbit1-${index}`}
                                             src={image.src}
                                             alt={image.alt}
+                                            width={60}
+                                            height={60}
                                             className="w-[60px] h-[60px] object-contain rounded-full ml-8"
                                         />
                                     ))}
@@ -90,22 +91,24 @@ export default function Home(){
                         <div className="items-center justyfy-center text-center mt-5">
                             <h1 className="text-4xl font-serif text-amber-50 font-bold" >Explore Our AI Platform</h1>
                             <h3>Discover the innovative capabilities behind our advanced AI models.</h3>                            <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-                                <OrbitingCircles iconSize={40}>
-                                    {images.map((image, index) => (
-                                        <img 
+                                <OrbitingCircles iconSize={40}>                                    {images.map((image, index) => (
+                                        <Image
                                             key={`orbit1-${index}`}
                                             src={image.src}
                                             alt={image.alt}
+                                            width={50}
+                                            height={50}
                                             className="w-[50px] h-[50px] object-contain rounded-full"
                                         />
                                     ))}
                                 </OrbitingCircles>
-                                <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-                                    {images.slice(0, 4).map((image, index) => (
-                                        <img 
+                                <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>                                    {images.slice(0, 4).map((image, index) => (
+                                        <Image 
                                             key={`orbit2-${index}`}
                                             src={image.src}
                                             alt={image.alt}
+                                            width={30}
+                                            height={30}
                                             className="w-[30px] h-[30px] object-contain rounded-full"
                                         />
                                     ))}

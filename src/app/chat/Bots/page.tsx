@@ -1,21 +1,11 @@
 "use client";
-import { AppWindowIcon, CodeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {CardDescription,CardTitle} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import ButtonBase from "@mui/material/ButtonBase";
 import { SearchIcon } from "lucide-react";
 import { useState } from "react";
-import {
-    Command,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList
-} from "@/components/ui/command";
+import Image from "next/image";
 
 const images = [
     { src: "/android-chrome-512x512.webp", alt: "ashna ai" },
@@ -135,7 +125,7 @@ export default function Bots() {
                                         key={idx} 
                                         className="h-[200px] p-4 bg-zinc-800 rounded-lg flex flex-col items-center justify-center gap-4"
                                     >
-                                        <img
+                                        <Image
                                             src={images[idx]?.src}
                                             alt={images[idx]?.alt}
                                             className="w-16 h-16 rounded-full object-cover"

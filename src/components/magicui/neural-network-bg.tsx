@@ -48,8 +48,8 @@ export const NeuralNetworkBg = () => {
         this.y += this.vy;
 
         // Bounce off walls
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        if (this.x < 0 || this.x > (canvas?.width ?? 0)) this.vx *= -1;
+        if (this.y < 0 || this.y > (canvas?.height ?? 0)) this.vy *= -1;
       }      draw() {
         const adjustedY = this.y - (scrollOffsetRef.current * 0.5); // Parallax effect
         // Draw glow effect
