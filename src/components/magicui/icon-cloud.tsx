@@ -209,12 +209,20 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   const handleMouseUp = () => {
     setIsDragging(false);
   };
-
   // Animation and rendering
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
+
+    const resize = () => {
+      if (canvas.parentElement) {
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+      }
+    };
+    resize();
+    window.addEventListener('resize', resize);
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -298,25 +306,20 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    animate();
-
-    return () => {
+    animate();    return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
+      window.removeEventListener('resize', resize);
     };
   }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
-
-  return (
-    <canvas
+  return (    <canvas
       ref={canvasRef}
-      width={400}
-      height={400}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="rounded-lg"
+      className="w-[500px] h-[500px] block rounded-lg"
       aria-label="Interactive 3D Icon Cloud"
       role="img"
     />
