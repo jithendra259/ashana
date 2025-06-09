@@ -18,15 +18,18 @@ const images = [
 
  
 
+import { NeuralNetworkBg } from "@/components/magicui/neural-network-bg";
+
 export default function Home(){
     const router = useRouter();
     return(
-        <div>
-            <main className="flex flex-col mt-0 justify-between p-10">
+        <div className="relative min-h-screen">
+            <NeuralNetworkBg />
+            <main className="flex flex-col mt-0 justify-between p-10 relative z-10">
                 <div>
                     <div>
-                        <div className="relative w-full  bg-[#f1e1e1e] overflow-hidden flex flex-col md:flex-row items-center justify-center text-white px-6 sm:px-8 md:px-12 lg:px-24 xl:px-40 md:gap-4 lg:gap-16 xl:gap-62 ">
-                            <div className=" max-w-lg items-center justify-center overflow-hidden pt-3">
+                        <div className="relative w-full bg-[#f1e1e1e] overflow-hidden flex flex-col md:flex-row items-center justify-center text-white px-3 sm:px-8 md:px-12 lg:px-24 xl:px-40 md:gap-4 lg:gap-16 xl:gap-62 ">
+                            <div className=" max-w-lg items-center w-1/2 justify-center overflow-hidden ">
                                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                                     <p className="text-[3rem] w-1.5xl font-semibold">
                                     Experience NextGen AI With Ashna AI<span className="text-[#5046e6]">.</span>
@@ -45,8 +48,8 @@ export default function Home(){
                                         Try ashna
                                     </InteractiveHoverButton>
                                 </BoxReveal>
-                            </div>                            <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background-transparent border-none">
-                                    <IconCloud
+                            </div>                              <div className="relative flex h-[400px] max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background-transparent border-amber-50">
+                                    <IconCloud 
                                         images={[
                                             "/android-chrome-512x512.webp",
                                             "/chatgpt.png",
@@ -70,7 +73,7 @@ export default function Home(){
                         <div className="flex flex-row md:flex-row w-full text-center items-center justify-center mt-8 gap-4">
                          
                         <div className="w-1/2 ">
-                        <h1 className="text-3xl text-5xl font-bold mt-5">Our Partners & Platforms</h1>
+                        <h1 className="text-5xl font-bold mt-5">Our Partners & Platforms</h1>
                             <Marquee className="mt-4">
                               {images.map((image, index) => (
                                         <img
