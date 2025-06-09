@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-
 const images = [
     { src: "/android-chrome-512x512.webp", alt: "ashna ai" },
     { src: "/chatgpt.png", alt: "chatgpt ai" },
